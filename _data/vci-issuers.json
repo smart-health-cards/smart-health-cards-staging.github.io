@@ -13,13 +13,18 @@
     {
       "iss": "https://epicproxy.et0502.epichosted.com/EPPARRPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "UC Health (San Diego / Irvine / Riverside) and Affiliates",
-      "website": "https://myucsdchart.ucsd.edu/ucsd"
+      "canonical_iss": "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC"
     },
     {
       "iss": "https://epicproxy-pub.et0502.epichosted.com/EPPARRPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "UC Health (San Diego / Irvine / Riverside) and Affiliates",
-      "canonical_iss": "https://epicproxy.et0502.epichosted.com/EPPARRPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC"
+      "canonical_iss": "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC"
     },
+    {
+      "iss": "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "website": "https://myucsdchart.ucsd.edu/ucsd",
+      "name": "UC Health (San Diego / Irvine / Riverside) and Affiliates"
+    },    
     {
       "iss": "https://icproxy.mycclink.org/proxy-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Contra Costa Health Services",
@@ -2919,6 +2924,11 @@
       "iss": "https://docket.care/ak",
       "name": "State of Alaska",
       "website": "https://health.alaska.gov/dph/Epi/iz/Pages/default.aspx"
+    },
+    {
+      "iss": "https://health.us.cue.dev/api/smart-health-card/production",
+      "name": "Cue Health",
+      "website": "https://cuehealth.com/contact/support/"
     }
   ]
 }
