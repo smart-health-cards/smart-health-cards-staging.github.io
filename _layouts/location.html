@@ -197,7 +197,10 @@
     {% assign issuer_string = issuer.locations | join %}
     {% if issuer_string == country_string or issuer_string contains country_string or issuer_string contains location_string %}
       {% assign hc_issuer = issuers | where: "iss", issuer.canonical_iss | last %}
-      {% assign hc_issuers = hc_issuers | push: hc_issuer | sort_natural: "name" %}
+        {% comment %} Skip null values {% endcomment %}
+        {% if hc_issuer.name %}
+          {% assign hc_issuers = hc_issuers | push: hc_issuer | sort_natural: "name" %}
+        {% endif %}
       {% endif %}
   {% endfor %}
 
