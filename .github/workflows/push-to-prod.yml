@@ -35,7 +35,7 @@ jobs:
     - name: Checkout remote
       uses: actions/checkout@v4
       with:
-        token: ${{ github.token }}
+        token: ${{ github.actor.token }}
         repository: smart-health-cards/smart-health-cards.github.io
         ref: gh-pages
 
@@ -61,7 +61,7 @@ jobs:
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
       with:
-        token: ${{ github.token }}
+        token: ${{ github.actor.token }}
         branch: create-pull-request/br_pull-request
         branch-suffix: timestamp
         push-to-fork: builtmighty/smart-health-cards.github.io
