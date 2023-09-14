@@ -66,6 +66,7 @@ jobs:
         branch: create-pull-request/br_pull-request
         branch-suffix: timestamp
         delete-branch: true
+        push-to-fork: builtmighty/smart-health-cards.github.io
         committer: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: true
         title: Ready for Production - ${{ github.event.head_commit.timestamp }}
