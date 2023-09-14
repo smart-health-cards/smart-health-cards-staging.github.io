@@ -28,14 +28,14 @@ jobs:
     needs: build-changes
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
     steps:
     # Checkout the production repo
     - name: Checkout remote
       uses: actions/checkout@v4
       with:
-        token: ${{ github.actor.token }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         repository: smart-health-cards/smart-health-cards.github.io
         ref: gh-pages
 
@@ -61,7 +61,7 @@ jobs:
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
       with:
-        token: ${{ github.actor.token }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         branch: create-pull-request/br_pull-request
         branch-suffix: timestamp
         push-to-fork: builtmighty/smart-health-cards.github.io
