@@ -6,6 +6,10 @@ on:
       production
 
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   # Build out the changes to be pushed to the production repo, excluding the .git folder and CNAME file
   build-changes:
@@ -27,9 +31,6 @@ jobs:
   pull-request:
     needs: build-changes
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
     # Checkout the production repo
     - name: Checkout remote
