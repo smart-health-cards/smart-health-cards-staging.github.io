@@ -64,6 +64,7 @@ jobs:
         token: ${{ github.token }}
         branch: create-pull-request/br_pull-request
         branch-suffix: timestamp
+        push-to-fork: builtmighty/smart-health-cards.github.io
         delete-branch: true
         committer: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: true
